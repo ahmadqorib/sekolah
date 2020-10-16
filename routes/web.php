@@ -26,6 +26,19 @@ Route::group(['as'=>'admin.','prefix'=>'adminpanel','namespace'=>'Admin'], funct
     Route::group(['middleware'=>'auth'], function(){
         Route::get('/', 'HomeController@index')->name('home');
 
+        Route::group(['as'=>'role.','prefix'=>'role'], function(){
+            Route::get('/', 'PermissionController@role')->name('index');
+            Route::get('create', 'PermissionController@createRole')->name('create');
+            Route::post('store', 'PermissionController@storeRole')->name('store');
+            Route::get('{id}/edit', 'PermissionController@editRole')->name('edit');
+            Route::post('{id}/update', 'PermissionController@updateRole')->name('update');
+            Route::delete('{id}/delete', 'PermissionController@deleteRole')->name('delete');
+        });
+
+        Route::group(['as'=>'permission.','prefix'=>'permission'], function(){
+            Route::get('/', 'PermissionController@permission')->name('index');
+        });
+
         Route::group(['as'=>'profile.','prefix'=>'profile'], function(){
             Route::get('/', 'ProfileController@index')->name('index');
             Route::get('create', 'ProfileController@create')->name('create');

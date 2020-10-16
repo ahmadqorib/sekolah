@@ -59,6 +59,7 @@
 
     <!-- PAGE SCRIPTS -->
     <script src="{{ asset('assets/admin/dist/js/pages/dashboard2.js') }}"></script>
+    <script src="{{ asset('assets/admin/plugins/ujs.min.js') }}"></script>
 
     <script src="{{ asset('assets/admin/plugins/toastr/toastr.min.js') }}"></script>
     @stack('scripts')

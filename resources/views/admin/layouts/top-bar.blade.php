@@ -8,12 +8,16 @@
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
         <span class="dropdown-item dropdown-header">Pengaturan Izin Akses</span>
         <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item">
+            <a href="{{ route('admin.role.index') }}" class="dropdown-item">
                 <i class="fas fa-users mr-2"></i> Role
             </a>
             <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item">
+            <a href="{{ route('admin.permission.index') }}" class="dropdown-item">
                 <i class="fas fa-universal-access mr-2"></i> Permission
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="{{ route('admin.permission.index') }}" class="dropdown-item">
+                <i class="far fa-user-circle"></i> Account Pengguna
             </a>
             <div class="dropdown-divider"></div>
         </div>
